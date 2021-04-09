@@ -311,6 +311,9 @@ class WhatsAPIDriver(object):
     def is_connected(self):
         """Returns if user's phone is connected to the internet."""
         return self.wapi_functions.isConnected()
+    
+    def refresh_current_page(self):
+        self.driver.refresh()
 
     def wait_for_login(self, timeout=90):
         """
